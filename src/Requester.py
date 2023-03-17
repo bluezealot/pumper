@@ -16,7 +16,8 @@ class Requester:
             'key': self.ApiKey,
             'cx': self.EngineID,
             'start': startnum,
-            'q': keyword
+            'q': keyword,
+            'searchType': 'image'
         }
         ret = requests.get(self.GoogleUrl, params).json()
         return ret
